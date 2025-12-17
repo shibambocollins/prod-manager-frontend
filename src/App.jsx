@@ -26,6 +26,16 @@ function App() {
     );
   };
 
+    const updateProduct = (updatedProduct) => {
+    setProducts(prev =>
+      prev.map(product =>
+        product.id === updatedProduct.id
+          ? updatedProduct
+          : product
+      )
+    );
+  };
+
   return (
      <div>
       <h1>Items Manager</h1>
@@ -38,6 +48,7 @@ function App() {
 
       <ProductList products={products} 
       onDeleteProduct={deleteProduct} 
+      onUpdateProduct={updateProduct}
       />
     </div>
   );

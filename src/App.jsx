@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ProductList from './components/ProductList';
+import ProductForm from './components/ProductForm';
 
 
 function App() {
@@ -15,9 +16,15 @@ function App() {
     setProducts(fakeProducts);
   };
 
+  const addProduct = (product) => {
+    setProducts(prevProducts => [...prevProducts, product]);
+  };
+
   return (
      <div>
       <h1>Items Manager</h1>
+
+      <ProductForm onAddProduct={addProduct} />
 
       <button onClick={loadProducts}>
         Load Products

@@ -3,7 +3,7 @@ function App() {
     <div>
       <h1>Items Manager</h1>
 
-      <button>Load Products</button>
+      <button>Add Product</button>
 
       <ul>
         <li>No products yet</li>

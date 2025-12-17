@@ -3,11 +3,14 @@ function ProductList({ products }) {
     return <p>No products yet</p>;
   }
 
-  return (
+   return (
     <ul>
       {products.map(product => (
         <li key={product.id}>
-          {product.name} – R{product.price}
+          {product.name} – R{product.price}{' '}
+          <button onClick={() => onDeleteProduct(product.id)}>
+            Delete
+          </button>
         </li>
       ))}
     </ul>

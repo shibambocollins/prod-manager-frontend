@@ -20,6 +20,12 @@ function App() {
     setProducts(prevProducts => [...prevProducts, product]);
   };
 
+   const deleteProduct = (id) => {
+    setProducts(prev =>
+      prev.filter(product => product.id !== id)
+    );
+  };
+
   return (
      <div>
       <h1>Items Manager</h1>
@@ -30,7 +36,9 @@ function App() {
         Load Products
       </button>
 
-      <ProductList products={products} />
+      <ProductList products={products} 
+      onDeleteProduct={deleteProduct} 
+      />
     </div>
   );
 }

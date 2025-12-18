@@ -9,8 +9,9 @@ function ProductForm({ onAddProduct }) {
 
     if (!name || !price) return;
 
+    //**********************/
     const newProduct = {
-      id: Date.now(),
+    //id: Date.now(),
       name: name,
       price: Number(price)
     };

@@ -52,7 +52,7 @@ form input, form button {
 }
 
 form button {
-  background-color: #FF7F50;
+  background-color: #7e5a4c;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -60,7 +60,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #FF6333;
+  background-color: #48271f;
 }
 
 /* Product List */
@@ -78,7 +78,7 @@ li {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #6e4136;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   margin-bottom: 10px;
@@ -98,13 +98,13 @@ li button {
   border-radius: 6px;
   border: none;
   cursor: pointer;
-  background-color: #FF7F50;
+  background-color: #724439;
   color: #fff;
   transition: 0.2s;
 }
 
 li button:hover {
-  background-color: #FF6333;
+  background-color: #351d17;
 }
 
 /* Responsive for small screens */

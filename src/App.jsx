@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProductList from "./components/ProductList";
 import ProductForm from "./components/ProductForm";
 import headerImage from "./assets/design1.png";
+import "./App.css";
 
 import {
   getProducts,
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div
+      className="app"
       style={{
         minHeight: "100vh",
         backgroundColor: "#F3E9DC",
@@ -58,8 +60,8 @@ function App() {
 
       <ProductList
         products={products}
-        onDeleteProduct={deleteProduct}
-        onUpdateProduct={updateProduct}
+        removeProduct={removeProduct}
+        editProduct={editProduct}
       />
     </div>
   );

@@ -34,7 +34,13 @@ function App() {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "#F3E9DC",
+        padding: "20px",
+      }}
+    >
       <img
         src={headerImage}
         alt="Items Manager"

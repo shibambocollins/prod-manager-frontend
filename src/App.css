@@ -1,30 +1,124 @@
+/* General App Container */
 .app {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  min-height: 100vh;
+  background-color: #F3E9DC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button,
-input {
-  max-width: 100%;
+/* Header Image + Title */
+.app-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+.header-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Form Inputs */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+form input, form button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #FF7F50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+form button:hover {
+  background-color: #FF6333;
+}
+
+/* Product List */
 ul {
+  list-style: none;
   padding: 0;
+  width: 100%;
 }
 
 li {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
 }
 
+li input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+li button {
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #FF7F50;
+  color: #fff;
+  transition: 0.2s;
+}
+
+li button:hover {
+  background-color: #FF6333;
+}
+
+/* Responsive for small screens */
 @media (max-width: 600px) {
   li {
     flex-direction: column;
+    align-items: stretch;
   }
 
-  button {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button, input {
     width: 100%;
   }
 }
